@@ -1,0 +1,24 @@
+{
+  "name": "profile_generator",
+  "version": "1.0.0",
+  "description": "An application that uses Node to generate githib profiles",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DwayneLaughlin/profile_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DwayneLaughlin/profile_generator/issues"
+  },
+  "homepage": "https://github.com/DwayneLaughlin/profile_generator#readme"
+}
