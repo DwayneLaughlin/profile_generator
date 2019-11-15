@@ -1,5 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer')
+const pdf = require('pdfkit')
+const test = "hello"
+// queryURL = "https://api.github.com/users/" + answers.userName;
 
 
 
@@ -20,14 +23,21 @@ inquirer
       
     ])
     .then(answers => {
-        fs.writeFile("log.pdf", JSON.stringify(answers), (err) => {
+        queryURL = "https://api.github.com/users/" + answers.userName;
+
+        fs.writeFile("log.pdf", queryURL, (err) => {
             if (err) {
                 return console.log(err);
+            } else {
+                const doc = new pdf;
+                doc.pipe(fs.createWriteStream('profgen.pdf'));
+                doc.font('Times-Roman')
+                doc.fontSize(18)
+                doc.text(queryURL)
+                doc.end();
             }
-        })
-        
-            
-       
-     
-      
+        }) 
     })
+
+
+  
