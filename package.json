@@ -4,6 +4,7 @@
   "description": "An application that uses Node to generate githib profiles",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "fs": "^0.0.1-security",
     "inquirer": "^7.0.0",
     "pdfkit": "^0.10.0"
