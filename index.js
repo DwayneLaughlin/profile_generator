@@ -29,17 +29,22 @@ inquirer
         .get(queryURL)
         .then(function(results){
             console.log(results.data.id)
-            fs.writeFile("log.pdf", queryURL, (err) => {
+            fs.writeFile("profgen.pdf", queryURL, (err) => {
                 if (err) {
                     return console.log(err);
                 } else {
                     const doc = new pdf;
                     
-                    // doc.rect(max,max,max,max)
+                    doc.rect(0, 0, 700, 800)
+                    .fillColor("black")
+                    .fillAndStroke(answers.choice)
                     doc.pipe(fs.createWriteStream('profgen.pdf'));
                     doc.font('Times-Roman')
                     doc.fontSize(18)
-                    doc.text(JSON.stringify(results.data.id + results.data.name)).fillColor("red")
+                    doc.fillColor("black")
+                    .text(results.data.avatar_url)
+                    doc.text(JSON.stringify("Location: " + results.data.location))
+                    doc.text(JSON.stringify("URL: " + results.data.html_url))
                     
                     doc.end();
                 }
