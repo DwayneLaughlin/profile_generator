@@ -7,4 +7,6 @@ Inquirer is used to get information from the user. The user's favorite color is 
 
 The user name fills out the call for github's API. Once submitted the information is pulled from the API and fills in the information available for that user. 
 
+![](https://laughlinportfolio.herokuapp.com/static/media/ProfileGenerator.c47c2c2b.png)
+
 Go to https://drive.google.com/file/d/1M92mnwpmKBEKtnELk8g49062Fli68UqV/view to see a video of the app in action
